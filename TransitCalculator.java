@@ -15,17 +15,15 @@ public class TransitCalculator {
     double[] fare = {2.75, 33.00, 127.00};
 
     public TransitCalculator(int numDays, int numRides) {
-        if (numDays >= 1 && numDays <= 30 && numRides > 1) {
+        if (numDays >= 1 && numDays <= 30 && numRides > 1) { // Checks if user input valid
             days = numDays;
             individualRides = numRides;
         } else System.out.println("Invalid options!");
     }
 
     public double unlimited7Price() {
-        double weeks = Math.ceil(((double) days / 7));
-        double pricePerRide;
-
-        pricePerRide = fare[1] / individualRides * weeks;
+        double weeks = Math.ceil(((double) days / 7)); // Converts to days to weeks
+        double pricePerRide = fare[1] / individualRides * weeks;
         return Math.round(pricePerRide * 100.0) / 100.0;
 
     }
@@ -48,7 +46,7 @@ public class TransitCalculator {
                 bestFare = options[i];
             }
         }
-        String message = "You should get the " + bestFare + "option at $" + lowestPrice + " per ride";
+        String message = "You should get the " + bestFare + " option at $" + lowestPrice + " per ride";
         return message;
     }
 
