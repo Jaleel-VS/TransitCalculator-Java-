@@ -1,3 +1,8 @@
+/* To-do:
+ - Add option for age-specific rates eg. older than 65 uses different rates
+ - Use while loop to allow user to check out different rates, stop loop when specific input is given
+ */
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
